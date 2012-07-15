@@ -17,6 +17,8 @@
 		5138678D15B2B27700A24A87 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5138676D15B2B27600A24A87 /* Cocoa.framework */; };
 		5138679515B2B27700A24A87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5138679315B2B27700A24A87 /* InfoPlist.strings */; };
 		5138679815B2B27700A24A87 /* SaveLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5138679715B2B27700A24A87 /* SaveLayoutTests.m */; };
+		513867A615B2CFD900A24A87 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513867A515B2CFD900A24A87 /* Carbon.framework */; };
+		513867A915B32DFA00A24A87 /* SLData.m in Sources */ = {isa = PBXBuildFile; fileRef = 513867A815B32DFA00A24A87 /* SLData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +37,23 @@
 		5138677015B2B27600A24A87 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		5138677115B2B27600A24A87 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5138677215B2B27600A24A87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5138677515B2B27600A24A87 /* SaveLayout-Info.plist */ = {isa = PBXFileReference; path = "SaveLayout-Info.plist"; sourceTree = "<group>"; };
+		5138677515B2B27600A24A87 /* SaveLayout-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SaveLayout-Info.plist"; sourceTree = "<group>"; };
 		5138677715B2B27600A24A87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5138677915B2B27600A24A87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5138677B15B2B27600A24A87 /* SaveLayout-Prefix.pch */ = {isa = PBXFileReference; path = "SaveLayout-Prefix.pch"; sourceTree = "<group>"; };
+		5138677B15B2B27600A24A87 /* SaveLayout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SaveLayout-Prefix.pch"; sourceTree = "<group>"; };
 		5138677D15B2B27600A24A87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		5138677F15B2B27600A24A87 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		5138677F15B2B27600A24A87 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5138678015B2B27600A24A87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5138678315B2B27700A24A87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		5138678A15B2B27700A24A87 /* SaveLayoutTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaveLayoutTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5138678B15B2B27700A24A87 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5138679215B2B27700A24A87 /* SaveLayoutTests-Info.plist */ = {isa = PBXFileReference; path = "SaveLayoutTests-Info.plist"; sourceTree = "<group>"; };
+		5138679215B2B27700A24A87 /* SaveLayoutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SaveLayoutTests-Info.plist"; sourceTree = "<group>"; };
 		5138679415B2B27700A24A87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5138679615B2B27700A24A87 /* SaveLayoutTests.h */ = {isa = PBXFileReference; path = SaveLayoutTests.h; sourceTree = "<group>"; };
+		5138679615B2B27700A24A87 /* SaveLayoutTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SaveLayoutTests.h; sourceTree = "<group>"; };
 		5138679715B2B27700A24A87 /* SaveLayoutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveLayoutTests.m; sourceTree = "<group>"; };
+		513867A515B2CFD900A24A87 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		513867A715B32DFA00A24A87 /* SLData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLData.h; sourceTree = "<group>"; };
+		513867A815B32DFA00A24A87 /* SLData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513867A615B2CFD900A24A87 /* Carbon.framework in Frameworks */,
 				5138676E15B2B27600A24A87 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +100,7 @@
 		5138676C15B2B27600A24A87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				513867A515B2CFD900A24A87 /* Carbon.framework */,
 				5138676D15B2B27600A24A87 /* Cocoa.framework */,
 				5138678B15B2B27700A24A87 /* SenTestingKit.framework */,
 				5138676F15B2B27600A24A87 /* Other Frameworks */,
@@ -118,6 +125,8 @@
 				5138678015B2B27600A24A87 /* AppDelegate.m */,
 				5138678215B2B27700A24A87 /* MainMenu.xib */,
 				5138677415B2B27600A24A87 /* Supporting Files */,
+				513867A715B32DFA00A24A87 /* SLData.h */,
+				513867A815B32DFA00A24A87 /* SLData.m */,
 			);
 			path = SaveLayout;
 			sourceTree = "<group>";
@@ -263,6 +272,7 @@
 			files = (
 				5138677A15B2B27600A24A87 /* main.m in Sources */,
 				5138678115B2B27600A24A87 /* AppDelegate.m in Sources */,
+				513867A915B32DFA00A24A87 /* SLData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

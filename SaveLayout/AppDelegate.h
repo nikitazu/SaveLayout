@@ -7,8 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <Carbon/Carbon.h>
+#import "SLData.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
+{
+    IBOutlet NSComboBox* _sourcesBox;
+    SLData* _data;
+}
 
 @property (assign) IBOutlet NSWindow *window;
 
