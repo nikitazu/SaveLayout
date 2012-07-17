@@ -19,19 +19,21 @@
         
         NSDictionary *original = [NSDictionary dictionaryWithObject:(id)kTISCategoryKeyboardInputSource
                                                              forKey:(id)kTISPropertyInputSourceCategory];
+        
         CFDictionaryRef dict = (__bridge CFDictionaryRef)original;
         
-        //_inputSources = TISCreateASCIICapableInputSourceList();
         _inputSources = TISCreateInputSourceList( dict, false );
         CFRetain( _inputSources );
         logInputSources( _inputSources );
         
         _savedInputSources = [NSMutableDictionary dictionary];
+        _startMinimized = NO;
     }
     return self;
 }
 
-- (void)cleanUp {
+- (void)dealloc
+{
     CFRelease( _inputSources );
 }
 
@@ -58,12 +60,35 @@
 
 - (void) save
 {
-    NSLog(@"todo: save");
+    NSLog(@"saving preferences...");
+    
+    NSString*               path    = [SL_PREFERENCES_PATH stringByExpandingTildeInPath];
+    NSMutableDictionary*    prefs   = [NSMutableDictionary dictionary];
+    
+    [prefs setObject:[NSNumber numberWithBool:_startMinimized] 
+              forKey:SL_PKEY_START_MINIMIZED];
+    
+    [prefs setObject:_savedInputSources 
+              forKey:SL_PKEY_INPUT_SOURCES];
+    
+    if ([prefs writeToFile:path atomically:YES]) {
+        NSLog(@"preferences saved in: %@", path);
+    }
 }
 
 - (void) load
 {
-    NSLog(@"todo: load");
+    NSLog(@"loading preferences...");
+    
+    NSString*       path    = [SL_PREFERENCES_PATH stringByExpandingTildeInPath];
+    NSDictionary*   prefs   = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+    
+    if (prefs) {
+        _savedInputSources  = [prefs objectForKey:SL_PKEY_INPUT_SOURCES];
+        _startMinimized     = [[prefs objectForKey:SL_PKEY_START_MINIMIZED] boolValue];
+        
+        NSLog(@"preferences loaded from: %@", path);
+    }
 }
 
 
@@ -73,14 +98,24 @@
     
     for (int i = 0; i < CFArrayGetCount(_inputSources); i++) {
         
-        TISInputSourceRef source = (TISInputSourceRef)CFArrayGetValueAtIndex( _inputSources, i );
+        TISInputSourceRef   source  = (TISInputSourceRef)CFArrayGetValueAtIndex( _inputSources, i );
+        CFStringRef         name    = TISGetInputSourceProperty( source, kTISPropertyLocalizedName );
         
-        CFStringRef name = TISGetInputSourceProperty( source, kTISPropertyLocalizedName );
-        
-        [temp addObject: (__bridge_transfer NSString*) name];
+        [temp addObject: (__bridge NSString*) name];
     }
     
     return temp;
+}
+
+
+- (BOOL) startMinimized
+{
+    return _startMinimized;
+}
+
+- (void) setStartMinimized:(BOOL)value
+{
+    _startMinimized = value;
 }
 
 

@@ -12,9 +12,16 @@
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 {
-    IBOutlet NSComboBox* _sourcesBox;
+    IBOutlet NSComboBox*    _sourcesBox;
+    IBOutlet NSScrollView*  _savedSourcesView;
+    IBOutlet NSButton*      _startMinimizedButton;
+    IBOutlet NSButton*      _okButton;
+    
     SLData* _data;
 }
+
+- (IBAction)onOkButtonPress:(id)sender;
+- (IBAction)onStartMinimizedButtonPress:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
 

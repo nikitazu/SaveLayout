@@ -17,6 +17,14 @@
     NSLog(@"start");
     
     _data = [SLData new];
+    [_data load];
+    
+    [_window setIsMiniaturized: [_data startMinimized]];
+    if ([_data startMinimized]) {
+        [_startMinimizedButton setState: NSOnState];
+    } else {
+        [_startMinimizedButton setState: NSOffState];
+    }
     
     [_sourcesBox addItemsWithObjectValues:[_data getInputSourcesNames]];
     
@@ -53,8 +61,22 @@
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification
 {
-    [_data cleanUp];
 	[[[NSWorkspace sharedWorkspace] notificationCenter] removeObserver:self];
+    [_data save];
+}
+
+
+- (IBAction) onOkButtonPress:(id)sender
+{
+    [_data save];
+    [_window setIsMiniaturized:YES];
+}
+
+
+- (IBAction)onStartMinimizedButtonPress:(id)sender
+{
+    [_data setStartMinimized: [_startMinimizedButton state] == NSOnState];
+    [_data save];
 }
 
 OSStatus MyHotKeyHandler(EventHandlerCallRef nextHandler,

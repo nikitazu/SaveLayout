@@ -9,20 +9,23 @@
 #import <Foundation/Foundation.h>
 #import <Carbon/Carbon.h>
 #import <Cocoa/Cocoa.h>
+#import "Preference.h"
 
 @interface SLData : NSObject
 {
     CFArrayRef              _inputSources;
     NSString*               _activeApplication;
     NSMutableDictionary*    _savedInputSources;
+    BOOL                    _startMinimized;
 }
 
 - (void) changeActiveApplication:(NSString*)name;
 - (void) changeActiveInputSource;
 - (void) save;
 - (void) load;
-- (void) cleanUp;
 
 - (NSArray*) getInputSourcesNames;
+- (BOOL) startMinimized;
+- (void) setStartMinimized:(BOOL)value;
 
 @end

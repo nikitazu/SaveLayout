@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		511CE00915B5EB4700C1EF3F /* Preference.m in Sources */ = {isa = PBXBuildFile; fileRef = 511CE00815B5EB4700C1EF3F /* Preference.m */; };
 		5138676E15B2B27600A24A87 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5138676D15B2B27600A24A87 /* Cocoa.framework */; };
 		5138677815B2B27600A24A87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5138677615B2B27600A24A87 /* InfoPlist.strings */; };
 		5138677A15B2B27600A24A87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5138677915B2B27600A24A87 /* main.m */; };
@@ -32,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		511CE00715B5EB4700C1EF3F /* Preference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Preference.h; sourceTree = "<group>"; };
+		511CE00815B5EB4700C1EF3F /* Preference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Preference.m; sourceTree = "<group>"; };
 		5138676915B2B27600A24A87 /* SaveLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5138676D15B2B27600A24A87 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		5138677015B2B27600A24A87 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,8 @@
 				5138677415B2B27600A24A87 /* Supporting Files */,
 				513867A715B32DFA00A24A87 /* SLData.h */,
 				513867A815B32DFA00A24A87 /* SLData.m */,
+				511CE00715B5EB4700C1EF3F /* Preference.h */,
+				511CE00815B5EB4700C1EF3F /* Preference.m */,
 			);
 			path = SaveLayout;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				5138677A15B2B27600A24A87 /* main.m in Sources */,
 				5138678115B2B27600A24A87 /* AppDelegate.m in Sources */,
 				513867A915B32DFA00A24A87 /* SLData.m in Sources */,
+				511CE00915B5EB4700C1EF3F /* Preference.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +452,7 @@
 				5138679D15B2B27700A24A87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5138679E15B2B27700A24A87 /* Build configuration list for PBXNativeTarget "SaveLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +461,7 @@
 				513867A015B2B27700A24A87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
