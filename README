@@ -1,0 +1,43 @@
+SaveLayout
+==========
+
+Keyboard layout manager. Switches keyboard layout automagically
+based on which application is frontmost on your desktop.
+
+
+Usage
+-----
+
+Just start it and hide in dock.
+
+
+Behaviour
+---------
+
+When you press CMD+SPACE to switch keboard layout,
+SaveLaoyt saves your input source for current application.
+
+When you switch to other application, it looks up saved
+input source and loads it. If nothing is previously saved
+then it switches to default input source.
+
+
+TODO
+----
+
+If you change decrease the number of input sources it may
+break switching to saved application.
+
+If you change input sources not with CMD+SPACE your 
+change will go unnoticed by SaveLayout, and when you 
+switch out fo it and then back it will restore previous layout.
+
+
+
+System requirements
+-------------------
+
+Mac OS X Lion
+
+~11 Mb in memory
+~67 Kb on disk
